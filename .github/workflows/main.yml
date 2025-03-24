@@ -17,7 +17,7 @@ env:
   XCODE_VERSION: 14.3
   DOTNET_VERSION_TARGETS: net7.0
   CSPROJ_TO_BUILD: https://github.com/Yotechnigeria/LlOOy-Beats/blob/main/LlOOyBeats.csproj
-  PROJECT_FOLDER: PROJECT_FOLDER_NAME
+  PROJECT_FOLDER: main
 jobs:
   vars:
     runs-on: ubuntu-22.04

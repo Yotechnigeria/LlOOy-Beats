@@ -1,0 +1,35 @@
+name: Android Publish
+
+on:
+  workflow_call:
+    inputs:
+      dotnet-version:
+        required: true
+        type: string
+      dotnet-version-target:
+        required: true
+        type: string
+      xcode-version:
+        required: true
+        type: string
+      project-file:
+        required: true
+        type: string
+      project-folder:
+        required: true
+        type: string
+      build-config:
+        required: true
+        type: string
+      build-version:
+        required: true
+        type: string
+    secrets:      
+      keystore-password:
+        required: true
+      keystore-alias:
+        required: true
+      keystore:
+        required: true
+      playstore-service-account:
+        required: true

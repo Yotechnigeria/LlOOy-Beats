@@ -16,7 +16,7 @@ env:
   DOTNET_VERSION: 7.0.x
   XCODE_VERSION: 14.3
   DOTNET_VERSION_TARGETS: net7.0
-  CSPROJ_TO_BUILD: PATH_TO_PROJECT_FILE
+  CSPROJ_TO_BUILD: https://github.com/Yotechnigeria/LlOOy-Beats/blob/main/LlOOyBeats.csproj
   PROJECT_FOLDER: PROJECT_FOLDER_NAME
 jobs:
   vars:

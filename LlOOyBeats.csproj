@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFrameworks>net9.0-android, n</TargetFrameworks>
+    <TargetFrameworks>net7.0-android;net7.0-ios;net7.0-macos;net7.0-windows</TargetFrameworks>
     <UseMaui>true</UseMaui>
     <SingleProject>true</SingleProject>
   </PropertyGroup>

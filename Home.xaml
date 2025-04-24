@@ -1,0 +1,157 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    
+    xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+    
+    xmlns:local="clr-namespace:BeatsAppClient"
+    
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="BeatsAppClient.Home">
+    <StackLayout
+        BackgroundColor="Blue">
+        <ListView
+            x:Name="BeatsList"
+            Header="Beats"
+            CachingStrategy="RetainElement"
+            RefreshAllowed="True"
+            RefreshControlColor="Red"
+            IsVisible="False">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout>
+                            <HorizontalStackLayout>
+                                <Image
+                                    Source="{Binding Art}"
+                                    BackgroundColor="SkyBlue" />
+                                <Label
+                                    Text="{Binding Beat_Title}"
+                                    TextColor="Green"
+                                    TextType="Text" />
+                            </HorizontalStackLayout>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <ProgressBar
+            x:Name="BeatProgressBar"
+            IsVisible="False"
+            Opacity="1"
+            ProgressColor="Green"
+            HeightRequest="25" />
+        <HorizontalStackLayout>
+            <Image
+                x:Name="Art___"
+                Source="{Binding Art}"
+                HeightRequest="50"
+                WidthRequest="50" />
+            <Label
+                x:Name="Title___"
+                Text="{Binding BeatTitle}"
+                TextColor="Green" />
+            <Button
+                x:Name="Purchase_Button"
+                Text="PURCHASE"
+                HeightRequest="16" />
+        </HorizontalStackLayout>
+        <ListView
+            x:Name="LicenceList"
+            Header="Licence"
+            CachingStrategy="RetainElement"
+            RefreshAllowed="True"
+            RefreshControlColor="Red"
+            IsVisible="False">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout>
+                            <Label
+                                Text="{Binding Type}" />
+                            <Label
+                                Text="{Binding AudioStreams}" />
+                            <Label
+                                Text="{Binding VideoStreams}" />
+                            <Label
+                                Text="{Binding Song}" />
+                            <Label
+                                Text="{Binding MusicVideos}" />
+                            <Label
+                                Text="{Binding Performance}" />
+                            <Label
+                                Text="{Binding Price}" />
+                            <Label
+                                Text="{Binding Commercial Adverts}" />
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <VerticalStackLayout
+            x:Name="DebitCardPlate"
+            BackgroundColor="Green"
+            HorizontalOptions="FillAndExpand">
+            <HorizontalStackLayout
+                HorizontalOptions="Fill">
+                <Label
+                    Text="DEBIT CARD"
+                    HeightRequest="50"
+                    TextColor="White"
+                    HorizontalOptions="Start" />
+                <Label
+                    Text="BANK"
+                    HeightRequest="70"
+                    TextColor="White"
+                    HorizontalOptions="End"
+                    Padding="5" />
+            </HorizontalStackLayout>
+            <Image
+                Source="calendar.png"
+                HeightRequest="25"
+                WidthRequest="25"
+                HorizontalOptions="Start" />
+            <Entry
+                x:Name="CardNo"
+                Placeholder="1234  5678  9010  4564"
+                PlaceholderColor="White"
+                HeightRequest="18"
+                TextColor="White"
+                HorizontalOptions="CenterAndExpand" />
+            <HorizontalStackLayout>
+                <Entry
+                    x:Name="ExpirationYear"
+                    Placeholder="**/12 (ExpirationYear)"
+                    PlaceholderColor="White"
+                    HeightRequest="16"
+                    TextColor="White" />
+                <Entry
+                    x:Name="ExpirationMonth"
+                    Placeholder="12/** (Expiration Month)"
+                    PlaceholderColor="White"
+                    HeightRequest="16"
+                    TextColor="White" />
+            </HorizontalStackLayout>
+        </VerticalStackLayout>
+        <Entry
+            x:Name="CardPin"
+            Placeholder="Card Pin"
+            PlaceholderColor="White"
+            TextColor="Green" />
+        <Entry
+            x:Name="CVV_"
+            Placeholder="CVV (The 3 digit numbers at the back of the card)"
+            PlaceholderColor="White"
+            TextColor="Green" />
+        <Button
+            x:Name="Done_Button"
+            Text="DONE"
+            TextColor="White"
+            BackgroundColor="Green" />
+        <Entry
+            x:Name="OTP_"
+            Placeholder="OTP"
+            PlaceholderColor="White"
+            TextColor="White" />
+    </StackLayout>
+</ContentPage>
